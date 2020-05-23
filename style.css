@@ -1,0 +1,53 @@
+.carousel {
+    height: 80vh!important;
+}
+
+.carousel-img {
+    background-size: cover;
+    background-position: center;
+  }
+
+.section {
+  padding-top: 4vw;
+  padding-bottom: 4vw;
+}
+
+.tabs .indicator {
+  background-color: #000;
+}
+
+.parallax-container {
+  height: 50vh;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  background: transparent;
+}
+
+.btn-large:hover {
+  background-color: #fff!important;
+  color: #000;
+  border: 1px solid #000;
+}
+
+#contact-btn {
+    top: -150px!important;
+}
+
+#headline {
+    margin-bottom: 210px;
+    text-shadow: 2px 2px 18px rgba(255, 255, 255, 1);
+}
+
+  @media screen and (max-width: 670px) {
+    .carousel {
+        height: 60vh!important;
+    }
+
+    .carousel-img {
+        height: 60vh;
+        background-size: cover;
+        background-position: center;
+      }
+    
+  }

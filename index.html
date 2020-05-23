@@ -9,38 +9,12 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <link rel="stylesheet" href="style.css">
   <title>Photo Dude</title>
 
   <style>
-    header {
-      background: url(img/blur-camera.jpg);
-      background-size: cover;
-      background-position: center;
-      min-height: 95vh;
-    }
-
-  .section {
-    padding-top: 4vw;
-    padding-bottom: 4vw;
-  }
-
-  .tabs .indicator {
-    background-color: #000;
-  }
-
-  .parallax-container {
-    height: 50vh;
-  }
-
-  .tabs .tab a:focus, .tabs .tab a:focus.active {
-    background: transparent;
-  }
-
-    @media screen and (max-width: 670px) {
-      header {
-        min-height: 60vh;
-      }
-    }
+    
   </style>
 </head>
 <body>
@@ -71,6 +45,28 @@
       </ul>
     </div>
   </header>
+
+  <!-- Carousel -->
+  <div class="carousel carousel-slider center">
+    <div class="carousel-fixed-item center">
+      <h2 id="headline">Experience the best <br />photograpic work...</h2>
+      <div>
+        <a class="btn-large waves-effect white black-text" href="#contact" id="contact-btn">Get A Free Quote</a>
+      </div>
+    </div>
+    <div class="carousel-item red white-text" href="#one!">
+      <img class="carousel-img" src="img/blur-camera.jpg" alt="carousel image" />
+    </div>
+    <div class="carousel-item amber white-text" href="#two!">
+      <img class="carousel-img" src="img/blur-camera.jpg" alt="carousel image" />
+    </div>
+    <div class="carousel-item green white-text" href="#three!">
+      <img class="carousel-img" src="img/blur-camera.jpg" alt="carousel image" />
+    </div>
+    <div class="carousel-item blue white-text" href="#four!">
+      <img class="carousel-img" src="img/blur-camera.jpg" alt="carousel image" />
+    </div>
+  </div>
 
   <!-- photo / grid -->
   <section class="container section" id="photo">
@@ -161,6 +157,30 @@
             <textarea id="message" class="materialize-textarea" cols="30" rows="10"></textarea>
             <label for="message">Your Message</label>
           </div>
+          <div class="input-field">
+            <i class="material-icons prefix">event</i>
+            <input type="text" id="date" class="date-picker"/>
+            <label for="date">Choose a date you need me for.</label>
+          </div>
+          <div class="input-field">
+            <p>Services required...</p>
+            <p>
+            <label>
+              <input type="checkbox"/>
+              <span>Photography</span>
+            </label>
+          </p>
+            <p>
+            <label>
+              <input type="checkbox"/>
+              <span>Videography</span>
+            </label>
+          </p>
+
+          <div class="input-field">
+            <input type="submit" class="btn-large black" />
+          </div>
+          </div>
         </form>
       </div>
     </div>
@@ -176,6 +196,13 @@
       $('.materialboxed').materialbox();
       $('.parallax').parallax();
       $('.tabs').tabs();
+      $('.date-picker').datepicker({
+        disableWeekends: true
+      });
+      $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        indicators: true
+      });
     });
   </script>
 </body>
